@@ -1,0 +1,273 @@
+{
+	"info": {
+		"_postman_id": "1daeba64-9e78-4a8e-a7d9-7e2dcdd93a3a",
+		"name": "Testing Exercises QAAutomationExpert",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Positive Test Case Get Request (QAE)",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "bd2021b2-eb2f-4a87-a4ae-dd721c18df0d",
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"id": "e4902a32-5c09-4c61-9da2-a586ca440070",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "http://dummy.restapiexample.com/api/v1/employees"
+			},
+			"response": []
+		},
+		{
+			"name": "Positive Test Case Post Request (QAE)",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "7dc8ec49-0afa-4ac8-b437-6733bf8914a9",
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"id": "ef4267b1-a769-4639-bea9-6367552d93f3",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n   \"name\":\"API_Test\",\r\n   \"salary\":\"45600\",\r\n   \"age\":\"23\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "https://dummy.restapiexample.com/api/v1/create"
+			},
+			"response": []
+		},
+		{
+			"name": "Positive Test Case Put Request (QAE)",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "3d3756d3-8259-4043-8374-b9bf2ca93747",
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"id": "5c9e3d6c-33ad-4aff-8da5-ceb89a541ec3",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n   \"name\":\"Update_Test\",\r\n   \"salary\":\"40600\",\r\n   \"age\":\"25\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "https://dummy.restapiexample.com/api/v1/update/1"
+			},
+			"response": []
+		},
+		{
+			"name": "Positive Test Case Delete Request (QAE)",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "c695bce9-dc78-4139-a349-ade3ce020b6c",
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"id": "dc934296-afd0-408e-8a58-fd69c28306e4",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "https://dummy.restapiexample.com/api/v1/delete/2"
+			},
+			"response": []
+		},
+		{
+			"name": "Negative Test Case Patch Request (QAE)",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "8d1f222b-7946-4ffb-9621-a9ed1d4413f1",
+						"exec": [
+							"pm.test(\"400 Bad Request\", function () {\r",
+							"    pm.response.to.have.status(400);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"id": "b8adaf53-02b2-4fc5-a259-0c8db8b429e7",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "PATCH",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"Patch_Test\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "https://reqres.in/api/users/2"
+			},
+			"response": []
+		},
+		{
+			"name": "Positive Test Case BDD JSON Post Request Create User(QAE)",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "8d1f222b-7946-4ffb-9621-a9ed1d4413f1",
+						"exec": [
+							"pm.test(\"400 Bad Request\", function () {\r",
+							"    pm.response.to.have.status(400);\r",
+							"});\r",
+							"\r",
+							"pm.test(\"Body matches string\", function () {\r",
+							"    pm.expect(pm.response.text()).to.include(\"data.name\");\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"id": "9c3e5e67-909e-48b5-a36d-24df4bb1e33d",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "PATCH",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"{{name}}\",\r\n    \"job\": \"{{job}}\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "https://reqres.in/api/users"
+			},
+			"response": []
+		},
+		{
+			"name": "SOAP Request",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "e5bcfcc6-0359-47a9-8467-4ff20b65034a",
+						"exec": [
+							"pm.test(\"InvertStringCase: AbCdE gets inverted to aBcDe\", () => {\r",
+							"  // Convert XML to JSON\r",
+							"\r",
+							"  var jsonObject = xml2Json(responseBody);\r",
+							"\r",
+							"  // Move through the JSON tree to find the object that contains the inverted cased string\r",
+							"\r",
+							"  var numberToWord = jsonObject[\"soap:Envelope\"][\"soap:Body\"][\"m:InvertStringCaseResponse\"][\"m:InvertStringCaseResult\"];\r",
+							"\r",
+							"  // Return a boolean where True means the test passed and False means the test failed\r",
+							"\r",
+							"  return numberToWord == \"aBcDe\";\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"id": "b827e28b-a7b7-4081-912e-009abb900585",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true,
+				"disabledSystemHeaders": {}
+			},
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "text/xml",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "<?xml version=\"1.0\" encoding=\"utf-8\"?>\r\n<soap12:Envelope xmlns:soap12=\"http://www.w3.org/2003/05/soap-envelope\">\r\n  <soap12:Body>\r\n    <InvertStringCase xmlns=\"http://www.dataaccess.com/webservicesserver/\">\r\n      <sAString>AbCdE</sAString>\r\n    </InvertStringCase>\r\n  </soap12:Body>\r\n</soap12:Envelope>",
+					"options": {
+						"raw": {
+							"language": "xml"
+						}
+					}
+				},
+				"url": "https://www.dataaccess.com/webservicesserver/TextCasing.wso"
+			},
+			"response": []
+		}
+	]
+}
